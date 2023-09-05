@@ -3,11 +3,14 @@
     <h3 class="ui header">Add a Link</h3>
     <div class="field">
       <label for="title">Title:</label>
-      <input name="title"type="text" id="title">
+      <input name="title"type="text" id="title" #newtitle>
     </div>
     <div class="field">
       <label for="link">Link:</label>
-      <input name="link"type="text" id="link">
+      <input name="link"type="text" id="link" #newlink>
     </div>
+    <button class="btn" (click)="addLink(newtitle,newlink)">
+      Submit!
+    </button>
   </form>
 </div>
