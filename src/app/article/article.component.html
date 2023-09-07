@@ -1,22 +1,22 @@
 <div class="main-container">
     <div class="points-container">
-        <div class = "vallue">
-            {{ votes}}
+        <div class = "value">
+            {{ article.votes}}
         </div>
         <div class="label">
             points
         </div>
     </div>
     <div class="link-container">
-        <a href="{{link}}">
-            {{title}}
+        <a href="{{article.link}}" class="title">
+            {{article.title}}
         </a>
         <ul>
             <li>
-                <a href=""> Vote Up </a>
+                <a href (click)="voteUp()" class="Voto" > Vote Up </a>
             </li>
             <li>
-                <a href="">Vote down</a>
+                <a href (click)="voteDown()" class="Voto">Vote down</a>
             </li>
         </ul>
 
