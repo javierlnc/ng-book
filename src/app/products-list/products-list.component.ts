@@ -15,7 +15,7 @@ export class ProductsListComponent {
   constructor() {
     this.onProductSelected = new EventEmitter();
   }
-  clicked(product: Product) {
+  clicked(product: Product): void {
     this.currentProduct = product;
     this.onProductSelected.emit(product);
   }
