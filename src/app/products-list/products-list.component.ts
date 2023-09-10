@@ -8,11 +8,22 @@ import { Product } from '../products.model';
 export class ProductsListComponent {
   @Input()
   productList!: Product[];
-  @Output() 
-  onProductSelected : EventEmitter<Product>;
+  @Output()
+  onProductSelected: EventEmitter<Product>;
+  private currentProduct!: Product;
 
-  constructor(){
+  constructor() {
     this.onProductSelected = new EventEmitter();
+  }
+  clicked(product: Product) {
+    this.currentProduct = product;
+    this.onProductSelected.emit(product);
+  }
+  isSelected(product: Product) {
+    if (!product || !this.currentProduct) {
+      return false;
+    }
+    return product.sku === this.currentProduct.sku;
   }
 
 

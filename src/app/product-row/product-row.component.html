@@ -1,0 +1,13 @@
+<div class="container">
+    <product-image [product]=" product"></product-image>
+    <div class="content">
+        <div class="heade">{{product.name}}</div>
+        <div class="meta">
+            <div class="product-sku"> SKU #{{product.sku}} </div>
+        </div>
+        <div class="description">
+            <product-deparment [product]="product"></product-deparment>
+        </div>
+    </div>
+    <price-display [price]="product.price"></price-display>
+</div>
